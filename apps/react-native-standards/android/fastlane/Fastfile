@@ -87,7 +87,7 @@ platform :android do
       skip_upload_screenshots: true,
       skip_upload_images: true,
       skip_upload_apk: true,
-      package_name: "com.whitestork.skip.admin",
+      package_name: "com.example",#this line needs to be added the bundleID
       track: 'internal'
     )
   end
@@ -108,7 +108,7 @@ platform :android do
       skip_upload_apk: true,
       skip_upload_metadata: false,
       skip_upload_screenshots: true,
-      package_name: "com.whitestork.skip.admin",
+      package_name: "com.example" #this line needs to be added the bundleID
       # aab: "../build/app/outputs/bundle/release/app-release.aab",
     )
     # upload_to_play_store(

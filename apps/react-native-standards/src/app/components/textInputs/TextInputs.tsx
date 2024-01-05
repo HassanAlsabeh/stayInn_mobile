@@ -12,8 +12,7 @@ import { Text, View } from '../themed';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import PhoneInput from 'react-native-phone-number-input';
-// import { useSignOutMutation } from '@skip/shared/infrastructure';
-// import { addLoginCredentials } from '../../RTK/auth/authActions';
+
 import { useThemeColors } from '../../hooks/useThemeColors';
 import { Borders } from '../../theme/Borders';
 const TextInputs = React.memo(

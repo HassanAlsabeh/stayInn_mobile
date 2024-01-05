@@ -13,9 +13,9 @@ platform :ios do
       key_filepath: “./AuthKey_5237422CZ5.p8”,
       duration: 1200, # optional (maximum 1200)
   )
-    increment_build_number(xcodeproj: "SkipTickMobile.xcodeproj")
-    set_info_plist_value(path: "SkipTickMobile/Info.plist", key: "CodePushDeploymentKey", value: "0YxDk8Fd_T4ScB29oX5QntvBynDrYdz7Kp5J2")
-    build_app(workspace: "SkipTickMobile.xcworkspace", scheme: "SkipTickMobile")
+    increment_build_number(xcodeproj: "example.xcodeproj")
+    set_info_plist_value(path: "example/Info.plist", key: "CodePushDeploymentKey", value: "")
+    build_app(workspace: "example.xcworkspace", scheme: "example")
 
     upload_to_testflight(skip_waiting_for_build_processing: true)
     
@@ -27,10 +27,10 @@ platform :ios do
 
   desc "Push a new release build to the App Store"
   lane :release do |options|
-    increment_build_number(xcodeproj: "SkipTickMobile.xcodeproj")
-    set_info_plist_value(path: "SkipTickMobile/Info.plist", key: "CodePushDeploymentKey", value: "Kssk77GjwTn4DtrZCjxSyzyHARSDknaiS23XI")
+    increment_build_number(xcodeproj: "example.xcodeproj")
+    set_info_plist_value(path: "example/Info.plist", key: "CodePushDeploymentKey", value: "")
     updateVersion(options)
-    build_app(workspace: "SkipTickMobile.xcworkspace", scheme: "SkipTickMobile")
+    build_app(workspace: "example.xcworkspace", scheme: "example")
     upload_to_app_store(
       force: true,
       reject_if_possible: true,

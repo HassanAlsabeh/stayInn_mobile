@@ -45,12 +45,13 @@ echo "Entered IOS bundle ID: $iosBundleId"
     mv apps/react-native-standards/ios/ReactNativeStandardsTests apps/react-native-standards/ios/${newFolderName}Test
     mv apps/react-native-standards/android/app/src/main/java/com/reactnativestandards apps/react-native-standards/android/app/src/main/java/com/$newFolderName
 
-
+/Users/hassanalsabeh/Desktop/mobile_development/org/apps/react-native-standards/android/app/src/staging/res/values/strings.xml
     
-    # mv apps/react-native-standards apps/$newFolderName
-    # mv apps/react-native-standards-e2e apps/$newFolderName-e2e
+    mv apps/react-native-standards apps/$newFolderName
+    mv apps/react-native-standards-e2e apps/$newFolderName-e2e
     # Update import statements in Android files
-    # find android/app/src/main/java/com/example/$newFolderName -type f -name "*.java" -exec sed -i '' -e "s/com.example.app/com.example.$newFolderName/g" {} +
+    # find android/app/src/main/java/com/example/$newFolderName -type f -name "*.java" -exec sed -i '' -e "s/com.example.app/com.exampl e.$newFolderName/g" {} +
     # Install dependencies
     npm install
 
+# run this commanf in the root folder: ./configure-app.sh  

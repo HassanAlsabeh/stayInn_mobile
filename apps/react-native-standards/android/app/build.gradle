@@ -1,6 +1,14 @@
 apply plugin: "com.android.application"
+project.ext.envConfigFiles = [
+   productiondebug: ".env.production",
+   productionrelease: ".env.production",
+   developmentrelease: ".env.development",
+   developmentdebug: ".env.development",
+   stagingrelease: ".env.staging",
+   stagingdebug: ".env.staging"
+]
 apply plugin: "com.facebook.react"
-
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle" // <- add this line
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -68,12 +76,41 @@ def enableProguardInReleaseBuilds = false
  * this variant is about 6MiB larger per architecture than default.
  */
 def jscFlavor = 'org.webkit:android-jsc:+'
+def reactNativeArchitectures() {
+    def value = project.getProperties().get("reactNativeArchitectures")
+    return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+}
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
+}
 android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+flavorDimensions "default"
+    productFlavors {
+        production {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.reactnativestandards.production"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.reactnativestandards"
+        }
+        staging {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.reactnativestandards.staging"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.reactnativestandards"
+        }
+        development {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.reactnativestandards.development"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.reactnativestandards"
+        }
+    }
     namespace "com.reactnativestandards"
     defaultConfig {
         applicationId "com.reactnativestandards"
@@ -87,6 +124,18 @@ android {
         
     }
     signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+            // if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+            //     storeFile file(MYAPP_UPLOAD_STORE_FILE)
+            //     storePassword MYAPP_UPLOAD_STORE_PASSWORD
+            //     keyAlias MYAPP_UPLOAD_KEY_ALIAS
+            //     keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            // }
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
@@ -95,8 +144,20 @@ android {
         }
     }
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
+        // debug {
+        //     signingConfig signingConfigs.debug
+        // }
+           debug {
+         signingConfig signingConfigs.debug
+                //  resValue "string", "CodePushDeploymentKey", '8qzBPAI9nHi4us5C3t021FDM4e9l1pGM10LYs'
+                      matchingFallbacks = ['debug', 'release']
+        }
+         releaseStaging {
+            signingConfig signingConfigs.release
+            // resValue "string", "CodePushDeploymentKey", '8qzBPAI9nHi4us5C3t021FDM4e9l1pGM10LYs'
+            matchingFallbacks = ['release']
+            
+            
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
@@ -115,7 +176,7 @@ dependencies {
     
     androidTestImplementation('com.wix:detox:+')
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    
+    implementation project(':react-native-config')
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
@@ -129,6 +190,14 @@ dependencies {
         implementation("com.facebook.react:hermes-android")
     } else {
         implementation jscFlavor
+    }
+}
+configurations {
+    all {
+        resolutionStrategy {
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.22'
+            force 'org.jetbrains.kotlin:kotlin-stdlib:1.7.22'
+        }
     }
 }
 
