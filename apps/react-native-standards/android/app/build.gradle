@@ -149,12 +149,12 @@ flavorDimensions "default"
         // }
            debug {
          signingConfig signingConfigs.debug
-                //  resValue "string", "CodePushDeploymentKey", '8qzBPAI9nHi4us5C3t021FDM4e9l1pGM10LYs'
+                //  resValue "string", "CodePushDeploymentKey", 'CodePushDeploymentKeyCodeStage'
                       matchingFallbacks = ['debug', 'release']
         }
          releaseStaging {
             signingConfig signingConfigs.release
-            // resValue "string", "CodePushDeploymentKey", '8qzBPAI9nHi4us5C3t021FDM4e9l1pGM10LYs'
+            // resValue "string", "CodePushDeploymentKey", 'CodePushDeploymentKeyCodeProd'
             matchingFallbacks = ['release']
             
             

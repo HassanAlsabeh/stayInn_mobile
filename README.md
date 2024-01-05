@@ -6,12 +6,12 @@
 
 ## Start the app
 
-check first the script in project package.json to run the certain environment of android.
-IOS environments needs to be manually setup: [check the link down below](#multiple-environments).
-
 First you should run `./configure-app.sh` to enter the name and bundle Id for the new app.
 
 then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+
+check first the script in project package.json to run the certain environment of android.
+IOS environments needs to be manually setup: [check the link down below](#multiple-environments).
 
 ## Generate code
 

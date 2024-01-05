@@ -13,9 +13,9 @@ platform :ios do
       key_filepath: “./AuthKey_5237422CZ5.p8”,
       duration: 1200, # optional (maximum 1200)
   )
-    increment_build_number(xcodeproj: "example.xcodeproj")
-    set_info_plist_value(path: "example/Info.plist", key: "CodePushDeploymentKey", value: "")
-    build_app(workspace: "example.xcworkspace", scheme: "example")
+    increment_build_number(xcodeproj: "reactnativestandards.xcodeproj")
+    set_info_plist_value(path: "reactnativestandards/Info.plist", key: "CodePushDeploymentKey", value: "CodePushDeploymentKeyCodeStage")
+    build_app(workspace: "reactnativestandards.xcworkspace", scheme: "reactnativestandards")
 
     upload_to_testflight(skip_waiting_for_build_processing: true)
     
@@ -27,10 +27,10 @@ platform :ios do
 
   desc "Push a new release build to the App Store"
   lane :release do |options|
-    increment_build_number(xcodeproj: "example.xcodeproj")
-    set_info_plist_value(path: "example/Info.plist", key: "CodePushDeploymentKey", value: "")
+    increment_build_number(xcodeproj: "reactnativestandards.xcodeproj")
+    set_info_plist_value(path: "reactnativestandards/Info.plist", key: "CodePushDeploymentKey", value: "CodePushDeploymentKeyCodeProd")
     updateVersion(options)
-    build_app(workspace: "example.xcworkspace", scheme: "example")
+    build_app(workspace: "reactnativestandards.xcworkspace", scheme: "reactnativestandards")
     upload_to_app_store(
       force: true,
       reject_if_possible: true,

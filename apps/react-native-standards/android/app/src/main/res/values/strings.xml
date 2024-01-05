@@ -1,4 +1,4 @@
 <resources>
-<!-- <string moduleConfig="true" name="CodePushDeploymentKey">NlFzpkp6gWwO7shz0qefWZISWhDzbiSOR3esS</string> -->
+<!-- <string moduleConfig="true" name="CodePushDeploymentKey">CodePushDeploymentKeyCode</string> -->
     <string name="app_name">ReactNativeStandards</string>
 </resources>
