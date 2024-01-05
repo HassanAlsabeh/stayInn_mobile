@@ -6,6 +6,8 @@
 
 ## Start the app
 
+After creating android and ios apps in the appcenter and initializing firebase account for your app you can start the setup.
+
 First you should run `./configure-app.sh` to enter the name and bundle Id for the new app.
 
 then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
