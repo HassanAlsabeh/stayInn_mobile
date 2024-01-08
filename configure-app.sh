@@ -42,6 +42,7 @@ echo "CodePushDeploymentKeyCodeProdIOS: $CodePushDeploymentKeyCodeProdIOS"
     sed -i '' -e "s/reactnativestandards/$newFolderName/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/CodePushDeploymentKeyCodeStageAndroid/$CodePushDeploymentKeyCodeStageAndroid/g" apps/react-native-standards/android/app/build.gradle
     sed -i '' -e "s/CodePushDeploymentKeyCodeProdAndroid/$CodePushDeploymentKeyCodeProdAndroid/g" apps/react-native-standards/android/app/build.gradle
+    sed -i '' -e "s/CodePushDeploymentKeyCodeProdAndroid/$CodePushDeploymentKeyCodeProdAndroid/g" apps/react-native-standards/android/app/src/main/res/values/strings.xml
     sed -i '' -e "s/com.reactnativestandards/$androidBundleId/g" apps/react-native-standards/android/fastlane/Appfile
     sed -i '' -e "s/com.reactnativestandards/$androidBundleId/g" apps/react-native-standards/android/fastlane/Fastfile
     sed -i '' -e "s/com.reactnativestandards/$androidBundleId/g" apps/react-native-standards/android/app/build.gradle
