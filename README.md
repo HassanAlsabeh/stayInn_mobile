@@ -10,6 +10,35 @@ After creating android and ios apps in the appcenter and initializing firebase a
 
 First you should run `./configure-app.sh` to enter the name and bundle Id for the new app.
 
+Notes before running the project:
+
+```
+1- You need to create your app in the firebase android and ios and get the google-services.json files.
+```
+
+```
+2- You need to create your app icons(make sure to make to versions for staging and profuction)
+```
+
+```
+3- Make sure to create the keystore file with the sutable keys and set it inside the android folder for the store configuration.
+```
+
+```
+4- Make sure to download the Authkey file for IOS fastlane functionality.
+```
+
+```
+5- Make sure to add .json file for the fastlane android configuration.
+```
+
+<!-- ```
+6-
+```
+```
+
+``` -->
+
 then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
 check first the script in project package.json to run the certain environment of android.
@@ -52,6 +81,10 @@ To initialize multiple environments visit: [Multiple environemnt setup](https://
 ## Push Notification:
 
 To start with push notification visit : [Push notifications setup](https://white-stork.atlassian.net/wiki/spaces/WSD/pages/998899729/React+Native+Push+Notification+Firebase)
+
+## CodePush reference:
+
+[Code Push](https://medium.com/innovance-company-blog/usage-of-codepush-in-react-native-0887676ec7bf)
 
 ## Want better Editor Integration?
 

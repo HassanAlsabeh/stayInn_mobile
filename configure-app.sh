@@ -19,6 +19,7 @@ read CodePushDeploymentKeyCodeProdIOS
 echo -n "CodePush Deployment Key Code Stage IOS: "
 read CodePushDeploymentKeyCodeStageIOS
 
+
 echo "Entered Folder Name: $newFolderName"
 echo "Entered Android bundle ID: $androidBundleId"
 echo "Entered IOS bundle ID: $iosBundleId"
@@ -29,6 +30,10 @@ echo "CodePushDeploymentKeyCodeStageAndroid: $CodePushDeploymentKeyCodeStageAndr
 echo "CodePushDeploymentKeyCodeProdAndroid: $CodePushDeploymentKeyCodeProdAndroid"
 echo "CodePushDeploymentKeyCodeStageIOS: $CodePushDeploymentKeyCodeStageIOS"
 echo "CodePushDeploymentKeyCodeProdIOS: $CodePushDeploymentKeyCodeProdIOS"
+
+
+
+
 
     # Set bundle ID in necessary files
     sed -i '' -e "s/com.reactnativestandards/$iosBundleId/g" apps/react-native-standards/ios/Reactnativestandards.xcodeproj/project.pbxproj
@@ -84,6 +89,22 @@ echo "CodePushDeploymentKeyCodeProdIOS: $CodePushDeploymentKeyCodeProdIOS"
     # Update import statements in Android files
     # find android/app/src/main/java/com/example/$newFolderName -type f -name "*.java" -exec sed -i '' -e "s/com.example.app/com.exampl e.$newFolderName/g" {} +
     # Install dependencies
+
+echo -n "Enter the new Repo URL:"
+read newRepoUrl
+git remote set-url origin $newRepoUrl
+
+# Step 5: Push Changes
+git push -u origin master
+
+# Step 6 (Optional): Set Upstream Remote
+echo "Enter the URL of the Original Template Repository (Optional):"
+read originalTemplateRepoUrl
+
+git remote add upstream $originalTemplateRepoUrl
+
+echo "Script completed successfully."
+
     npm install
 
 # run this commanf in the root folder: ./configure-app.sh  
