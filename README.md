@@ -34,12 +34,12 @@ First you should run `./configure-app.sh` to enter the name and bundle Id for th
 
 [fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
 
-<!-- ```
-6-
+```
+6- same as io after creating app and its profile you need to create keyID and download it to IOS folder and get its credentials to fastlane fastfile.
 ```
 ```
-
-``` -->
+7- Make sure to setup the profiles and certifications for your app in order to make fastlane works correctly
+```
 
 then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
