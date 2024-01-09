@@ -18,22 +18,54 @@ echo -n "CodePush Deployment Key Code Prod IOS: "
 read CodePushDeploymentKeyCodeProdIOS
 echo -n "CodePush Deployment Key Code Stage IOS: "
 read CodePushDeploymentKeyCodeStageIOS
-
-
-echo "Entered Folder Name: $newFolderName"
-echo "Entered Android bundle ID: $androidBundleId"
-echo "Entered IOS bundle ID: $iosBundleId"
-echo "appleDeveloperAccount: $appleDeveloperAccount"
-echo "appstoreteamID: $appstoreteamID"
-echo "portalTeamId: $portalTeamId"
-echo "CodePushDeploymentKeyCodeStageAndroid: $CodePushDeploymentKeyCodeStageAndroid"
-echo "CodePushDeploymentKeyCodeProdAndroid: $CodePushDeploymentKeyCodeProdAndroid"
-echo "CodePushDeploymentKeyCodeStageIOS: $CodePushDeploymentKeyCodeStageIOS"
-echo "CodePushDeploymentKeyCodeProdIOS: $CodePushDeploymentKeyCodeProdIOS"
-
-
-
-
+echo -n "Fastlane key_idCode IOS: "
+read key_idCode
+echo -n "Fastlane issuer_idCode IOS: "
+read issuer_idCode
+echo -n "Fastlane description IOS: "
+read description
+echo -n "Fastlane keywords IOS: "
+read keywords
+echo -n "Fastlane marketingURL IOS: "
+read marketingURL
+echo -n "Fastlane name IOS: "
+read name
+echo -n "Fastlane privacyURL IOS: "
+read privacyURL
+echo -n "Fastlane promotional_text IOS: "
+read promotional_text
+echo -n "Fastlane release_notes IOS: "
+read release_notes
+echo -n "Fastlane subtitle IOS: "
+read subtitle
+echo -n "Fastlane support_url IOS: "
+read support_url
+echo -n "Fastlane demo_password IOS: "
+read demo_password
+echo -n "Fastlane demo_user IOS: "
+read demo_user
+echo -n "Fastlane email_address IOS: "
+read email_address
+echo -n "Fastlane first_name IOS: "
+read first_name
+echo -n "Fastlane last_name IOS: "
+read last_name
+echo -n "Fastlane notes IOS: "
+read notes
+echo -n "Fastlane phone_number IOS: "
+read phone_number
+echo -n "Fastlane copyright IOS: "
+read copyright
+echo -n "Fastlane primary_category IOS: "
+read primary_category
+echo -n "Fastlane secondary_category IOS: "
+read secondary_category
+echo -n "Fastlane full_description Android: "
+read full_description
+echo -n "Fastlane short_description Android: "
+read short_description
+echo -n "Fastlane title Android: "
+read title
 
     # Set bundle ID in necessary files
     sed -i '' -e "s/com.reactnativestandards/$iosBundleId/g" apps/react-native-standards/ios/Reactnativestandards.xcodeproj/project.pbxproj
@@ -42,6 +74,34 @@ echo "CodePushDeploymentKeyCodeProdIOS: $CodePushDeploymentKeyCodeProdIOS"
     sed -i '' -e "s/appleDeveloperAccount/$appleDeveloperAccount/g" apps/react-native-standards/ios/fastlane/Appfile
     sed -i '' -e "s/appstoreteamID/$appstoreteamID/g" apps/react-native-standards/ios/fastlane/Appfile
     sed -i '' -e "s/portalTeamId/$portalTeamId/g" apps/react-native-standards/ios/fastlane/Appfile
+    sed -i '' -e "s/description/$description/g" apps/react-native-standards/ios/fastlane/metadata/en-US/description.txt
+    sed -i '' -e "s/keywords/$keywords/g" apps/react-native-standards/ios/fastlane/metadata/en-US/keywords.txt
+    sed -i '' -e "s/marketingURL/$marketingURL/g" apps/react-native-standards/ios/fastlane/metadata/en-US/keywords.txt
+    sed -i '' -e "s/name/$name/g" apps/react-native-standards/ios/fastlane/metadata/en-US/name.txt
+    sed -i '' -e "s/privacyURL/$privacyURL/g" apps/react-native-standards/ios/fastlane/metadata/en-US/privacy_url.txt
+    sed -i '' -e "s/promotional_text/$promotional_text/g" apps/react-native-standards/ios/fastlane/metadata/en-US/promotional_text.txt
+    sed -i '' -e "s/release_notes/$release_notes/g" apps/react-native-standards/ios/fastlane/metadata/en-US/release_notes.txt
+    sed -i '' -e "s/subtitle/$subtitle/g" apps/react-native-standards/ios/fastlane/metadata/en-US/subtitle.txt
+    sed -i '' -e "s/support_url/$support_url/g" apps/react-native-standards/ios/fastlane/metadata/en-US/support_url.txt
+    sed -i '' -e "s/demo_user/$demo_user/g" apps/react-native-standards/ios/fastlane/metadata/review_information/demo_user.txt
+    sed -i '' -e "s/demo_password/$demo_password/g" apps/react-native-standards/ios/fastlane/metadata/review_information/demo_password.txt
+    sed -i '' -e "s/email_address/$email_address/g" apps/react-native-standards/ios/fastlane/metadata/review_information/email_address.txt
+    sed -i '' -e "s/first_name/$first_name/g" apps/react-native-standards/ios/fastlane/metadata/review_information/first_name.txt
+    sed -i '' -e "s/last_name/$last_name/g" apps/react-native-standards/ios/fastlane/metadata/review_information/last_name.txt
+    sed -i '' -e "s/notes/$notes/g" apps/react-native-standards/ios/fastlane/metadata/review_information/notes.txt
+    sed -i '' -e "s/phone_number/$phone_number/g" apps/react-native-standards/ios/fastlane/metadata/review_information/phone_number.txt
+    sed -i '' -e "s/copyright/$copyright/g" apps/react-native-standards/ios/fastlane/metadata/review_information/copyright.txt
+    sed -i '' -e "s/primary_category/$primary_category/g" apps/react-native-standards/ios/fastlane/metadata/review_information/primary_category.txt
+    sed -i '' -e "s/secondary_category/$secondary_category/g" apps/react-native-standards/ios/fastlane/metadata/review_information/secondary_category.txt
+    sed -i '' -e "s/key_idCode/$key_idCode/g" apps/react-native-standards/ios/fastlane/Fastfile
+    sed -i '' -e "s/issuer_idCode/$issuer_idCode/g" apps/react-native-standards/ios/fastlane/Fastfile
+    sed -i '' -e "s/full_description/$full_description/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/full_description.txt
+    sed -i '' -e "s/short_description/$short_description/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/short_description.txt
+    sed -i '' -e "s/title/$title/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/title.txt
+
+
+
+
     sed -i '' -e "s/CodePushDeploymentKeyCodeStageIOS/$CodePushDeploymentKeyCodeStageIOS/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/CodePushDeploymentKeyCodeProdIOS/$CodePushDeploymentKeyCodeProdIOS/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/reactnativestandards/$newFolderName/g" apps/react-native-standards/ios/fastlane/Fastfile
@@ -107,4 +167,14 @@ echo "Script completed successfully."
 
     npm install
 
-# run this commanf in the root folder: ./configure-app.sh  
+# run this commanf in the root folder: ./configure-app.sh  # echo "Entered Folder Name: $newFolderName"
+# echo "Entered Android bundle ID: $androidBundleId"
+# echo "Entered IOS bundle ID: $iosBundleId"
+# echo "appleDeveloperAccount: $appleDeveloperAccount"
+# echo "appstoreteamID: $appstoreteamID"
+# echo "portalTeamId: $portalTeamId"
+# echo "CodePushDeploymentKeyCodeStageAndroid: $CodePushDeploymentKeyCodeStageAndroid"
+# echo "CodePushDeploymentKeyCodeProdAndroid: $CodePushDeploymentKeyCodeProdAndroid"
+# echo "CodePushDeploymentKeyCodeStageIOS: $CodePushDeploymentKeyCodeStageIOS"
+# echo "CodePushDeploymentKeyCodeProdIOS: $CodePushDeploymentKeyCodeProdIOS"
+

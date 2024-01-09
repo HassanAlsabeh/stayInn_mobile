@@ -10,7 +10,7 @@ After creating android and ios apps in the appcenter and initializing firebase a
 
 First you should run `./configure-app.sh` to enter the name and bundle Id for the new app.
 
-Notes before running the project:
+## Notes before running the project:
 
 ```
 1- You need to create your app in the firebase android and ios and get the google-services.json files.
@@ -31,6 +31,8 @@ Notes before running the project:
 ```
 5- Make sure to add .json file for the fastlane android configuration.
 ```
+
+[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
 
 <!-- ```
 6-

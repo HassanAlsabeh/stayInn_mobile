@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "whitestor-test",
+  "private_key_id": "9c527d39a30c0dc22afdeef46c221b49a51fc450",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCeFMX8wYIIZrTb\ngFyxeHPeVvJt/SX+vhjRJMGCAZwSNRYIi6BpbDtmEDdHCa6gb5VLBuXaelBJOjwt\nsuTv4ZBRYPnWwu6DFMGSktlY9OEO9Rgtja0tCwpFLPy2VhGdh0NuUgk/aXmf3FyI\njveFvadURwUh3TjvLEA/q0YKmYInE0IiIws3O+qS9cgjZZBdCJ22PqoS+zC6CsRT\nSjdUjqU77y2IzpaOEIbEyr4Q2B72NaPVvuDY+jJye/FmieVDqdtsDwbNlnpgSuG9\nLSRithbFKyVPZLJ6GfNhf7yaMmpAybbXF5OGRFGzQjHCrMdzVBHy5ASb+XApD1nv\n6bIX9+r5AgMBAAECggEAIyk5tHOSKa42khAmDe9dzlmGiMJi3huIR5SmWfVjsoUO\nRo5P+sLxH02CDhHwPo0zJsH9BDBqhS8nzX5Z/6UrRX6Nc6BeDtfiCmkRYQDuwjXv\nz8oQd9FZ0nMkLqZMOr6oV/R1TB54x/7qshEiqyO5ATzevl6HWGN+UusUpCzqzyfW\nlg5gg8rayco7sY6Y7Cr+q8v4JY+wDg4Lgl+9Z8Tcv6uRVPa3+I1fCRIqOXXTIi6R\nhmBhCdIPL+icxRTa8pgm7upR7/L+mKQw373Ml3aXPv6Q54tS9FCa9Vp5+0KA8hVe\nkLYe9NKfkTpfJEHqf3kl09gQaMpKOR0SqgksvTw0ZQKBgQDcJoXNFNW4w5oNFNb3\nsCoOA1ob58IEoVW2Wos0TMeWhyMij5UXUX0xnMddYrTancP7/JZHPdRwJVOBUIzF\n50u+2/uAIllICLh4JN9UjZeOEoF9hPerOe7NMNkBSkgiCjY0q8Q/b0tqwdsSupVp\nq7esix/a5yafNVI+kMmIDpm78wKBgQC30r+Q9BB7dA22UZ7wJ8BkjYcBCDCyU6St\nTbTP7xAxl6gBexOU/bcmDCgPLpWwodKnvm5ZQXUECURibZgbGlnDt0UfnGIDr7yI\n0jqX4CmaY9kghuV1i7pGIsmNE4deqiDIXN+H83gvG4RxcEj7p4yRSu53EbI4mG3a\nmfF9FGXUYwKBgQCbk7W2ymSG3+Q8HmAURjBSGthRJCUedI1IAxCg8ymRHQsdX26z\nPelFaFATlK/OVvOrXkMtMWqxng83MZ9qNBx5UqiXUq7ZkyAZ96TD8hQKWNWdyJvm\nK1ixNTYGDWKQe7r22fQkCBi55ylUQPtZ4/o3O1JVtki69kma4WMqfXbzNQKBgF2Z\n/5e032utZYoPt6m75BiPhE3/OKSlOLZSWh6DMbC+83qFjCwSoR7Lk95fLzO4wsZN\njmz+irIacerYuVobqdehy53UCIiuBId63QEW0Lhf3WDVr6OSGbC65/xhFE4cvQKp\nX90fGXSLQ35r2Y3i/A3DpPeWWDS/UTi9qJyzNULXAoGAZksBMxWwnh6q1a9Gn/Rj\nFv09IGYC6mZIXar8PnRuowqQO2C52R6wDLO2SXTv5L9+7NIXSzc/J7uDSTrlRqci\ntgB8095CVkeavWOPpydDwn4cjbnkWSPDDHssfmhWIbwvCS2pH4rogqQGRwDGwgeW\nCqZFIanny23QcspRrv7oXCI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "whitestork-test@whitestor-test.iam.gserviceaccount.com",
+  "client_id": "105512803965904628143",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/whitestork-test%40whitestor-test.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -8,8 +8,8 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do |options|
     app_store_connect_api_key(
-      key_id: “5237422CZ5”,
-      issuer_id: “bc2993f5-19bd-41f4-9b91-558c2ded703b”,
+      key_id: “key_idCode“,
+      issuer_id: “issuer_idCode”,
       key_filepath: “./AuthKey_5237422CZ5.p8”,
       duration: 1200, # optional (maximum 1200)
   )
