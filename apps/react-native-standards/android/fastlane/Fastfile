@@ -77,19 +77,22 @@ platform :android do
   lane :beta do |options|
     increment_version_code()
 
-    gradle(task: "clean bundleRelease",
-    # flavor: "staging",
-    # build_type: "Release"
-     )
+    gradle(
+      task: 'bundle',
+      flavor: 'staging',
+      build_type: 'ReleaseStaging'
+    )
     upload_to_play_store(
       skip_upload_metadata: true,
       skip_upload_changelogs: true,
       skip_upload_screenshots: true,
       skip_upload_images: true,
       skip_upload_apk: true,
-      package_name: "com.reactnativestandards",
-      track: 'internal'
+      package_name: "com.whitestorktest.production",
+      track: 'internal',
+      release_status: 'draft',
     )
+
   end
 
   desc "Deploy a new version to the Google Play"

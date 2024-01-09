@@ -97,9 +97,9 @@ read title
     sed -i '' -e "s/last_name/$last_name/g" apps/react-native-standards/ios/fastlane/metadata/review_information/last_name.txt
     sed -i '' -e "s/notes/$notes/g" apps/react-native-standards/ios/fastlane/metadata/review_information/notes.txt
     sed -i '' -e "s/phone_number/$phone_number/g" apps/react-native-standards/ios/fastlane/metadata/review_information/phone_number.txt
-    sed -i '' -e "s/copyright/$copyright/g" apps/react-native-standards/ios/fastlane/metadata/review_information/copyright.txt
-    sed -i '' -e "s/primary_category/$primary_category/g" apps/react-native-standards/ios/fastlane/metadata/review_information/primary_category.txt
-    sed -i '' -e "s/secondary_category/$secondary_category/g" apps/react-native-standards/ios/fastlane/metadata/review_information/secondary_category.txt
+    sed -i '' -e "s/copyright/$copyright/g" apps/react-native-standards/ios/fastlane/metadata/copyright.txt
+    sed -i '' -e "s/primary_category/$primary_category/g" apps/react-native-standards/ios/fastlane/metadata/primary_category.txt
+    sed -i '' -e "s/secondary_category/$secondary_category/g" apps/react-native-standards/ios/fastlane/metadata/secondary_category.txt
     sed -i '' -e "s/key_idCode/$key_idCode/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/issuer_idCode/$issuer_idCode/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/full_description/$full_description/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/full_description.txt
