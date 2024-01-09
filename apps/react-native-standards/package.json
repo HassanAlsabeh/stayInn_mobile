@@ -27,6 +27,7 @@
     "react-native-safe-area-context": "*",
     "@react-native-firebase/crashlytics": "*",
     "react-hook-form": "*",
-    "react-native-vector-icons": "*"
+    "react-native-vector-icons": "*",
+    "react-native-code-push": "*"
   }
 }

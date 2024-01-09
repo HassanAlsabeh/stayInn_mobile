@@ -11,6 +11,7 @@ import {
   Linking,
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
+import codePush from 'react-native-code-push';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
@@ -713,4 +714,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default codePush(App);

@@ -10,6 +10,10 @@ echo -n "Enter App Store Connect Team ID: "
 read appstoreteamID
 echo -n "Developer Portal Team ID: "
 read portalTeamId
+echo -n "AppSecretIOS: "
+read AppSecretIOS
+echo -n "AppSecretAndroid: "
+read AppSecretAndroid
 echo -n "CodePush Deployment Key Code Prod Android: "
 read CodePushDeploymentKeyCodeProdAndroid
 echo -n "CodePush Deployment Key Code Stage Android: "
@@ -74,6 +78,9 @@ read title
     sed -i '' -e "s/appleDeveloperAccount/$appleDeveloperAccount/g" apps/react-native-standards/ios/fastlane/Appfile
     sed -i '' -e "s/appstoreteamID/$appstoreteamID/g" apps/react-native-standards/ios/fastlane/Appfile
     sed -i '' -e "s/portalTeamId/$portalTeamId/g" apps/react-native-standards/ios/fastlane/Appfile
+    sed -i '' -e "s/AppSecretIOS/$AppSecretIOS/g" apps/react-native-standards/ios/ReactNativeStandards/AppCenter-Config.plist
+    sed -i '' -e "s/AppSecretAndroid/$AppSecretAndroid/g" apps/react-native-standards/android/app/src/main/assets/appcenter-config.json
+
     sed -i '' -e "s/description/$description/g" apps/react-native-standards/ios/fastlane/metadata/en-US/description.txt
     sed -i '' -e "s/keywords/$keywords/g" apps/react-native-standards/ios/fastlane/metadata/en-US/keywords.txt
     sed -i '' -e "s/marketingURL/$marketingURL/g" apps/react-native-standards/ios/fastlane/metadata/en-US/keywords.txt
