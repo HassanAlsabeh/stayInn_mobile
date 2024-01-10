@@ -10,11 +10,11 @@
 ## Notes before running the project:
 
 ```
-1- You need to create your app in the firebase android and ios and get the google-services.json files.
+1- You need to create your app in the `Firebase` android and IOS and get the google-services.json files. Also make sure to initialize crashlytics at the begining for every api.
 ```
 
 ```
-2- You need to create your app icons(make sure to make the versions of staging and profuction)
+2- You need to create your app icons(make sure to make the versions of staging and production)
 ```
 
 ```
@@ -25,30 +25,26 @@
 4- Make sure to download the Authkey file for IOS fastlane functionality.
 ```
 
-```
-5- Make sure to add .json file for the fastlane android configuration.
-```
+``
+5- Make sure to add .json file for the fastlane android configuration.[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
+``
 
 ```
-6- same as io after creating app and its profile you need to create keyID and download it to IOS folder and get its credentials to fastlane fastfile.
+6- Same as IOS after creating app and its profile you need to create keyID and download it to IOS folder and get its credentials to fastlane fastfile.
 ```
 ```
 7- Make sure to setup the profiles and certifications for your app in order to make fastlane works correctly
 ```
 ```
-8- Create github repository to transfer your project to since you are requested for its url
+8- Create github repository to transfer your project to it (required).
 ```
 ```
-9- After creating android and ios apps in the appcenter and initializing firebase account for your app you can start the setup.
+9- After creating android and `Ios` apps in the appcenter and initializing `Firebase` account for your app you can start the setup.
 ```
 
+IOS multi environments needs to be manually setup: [check the link down below](#multiple-environments).
 
-then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
-check first the script in project package.json to run the certain environment of android.
-IOS environments needs to be manually setup: [check the link down below](#multiple-environments).
-
-[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
 
 ## Generate code
 
