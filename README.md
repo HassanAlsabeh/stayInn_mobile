@@ -8,7 +8,6 @@
 
 After creating android and ios apps in the appcenter and initializing firebase account for your app you can start the setup.
 
-First you should run `./configure-app.sh` to enter the name and bundle Id for the new app.
 
 ## Notes before running the project:
 
@@ -32,19 +31,21 @@ First you should run `./configure-app.sh` to enter the name and bundle Id for th
 5- Make sure to add .json file for the fastlane android configuration.
 ```
 
-[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
-
 ```
 6- same as io after creating app and its profile you need to create keyID and download it to IOS folder and get its credentials to fastlane fastfile.
 ```
 ```
 7- Make sure to setup the profiles and certifications for your app in order to make fastlane works correctly
 ```
-
+```
+8- Create github repository to transfer your project to since you are requested for its url
+```
 then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
 check first the script in project package.json to run the certain environment of android.
 IOS environments needs to be manually setup: [check the link down below](#multiple-environments).
+
+[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
 
 ## Generate code
 
@@ -54,27 +55,7 @@ Run `nx list` to get a list of available plugins and whether they have generator
 
 Learn more about [Nx generators on the docs](https://nx.dev/plugin-features/use-code-generators).
 
-## Running tasks
-
-To execute tasks with Nx use the following syntax:
-
-```
-nx <target> <project> <...options>
-```
-
-You can also run multiple targets:
-
-```
-nx run-many -t <target1> <target2>
-```
-
-..or add `-p` to filter specific projects
-
-```
-nx run-many -t <target1> <target2> -p <proj1> <proj2>
-```
-
-Targets can be defined in the `package.json` or `projects.json`. Learn more [in the docs](https://nx.dev/core-features/run-tasks).
+### References:
 
 ## Multiple Environments:
 
@@ -88,24 +69,7 @@ To start with push notification visit : [Push notifications setup](https://white
 
 [Code Push](https://medium.com/innovance-company-blog/usage-of-codepush-in-react-native-0887676ec7bf)
 
-## Want better Editor Integration?
+## Running the app
 
-Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provides autocomplete support, a UI for exploring and running tasks & generators, and more! Available for VSCode, IntelliJ and comes with a LSP for Vim users.
-
-## Ready to deploy?
-
-Just run `nx build demoapp` to build the application. The build artifacts will be stored in the `dist/` directory, ready to be deployed.
-
-## Set up CI!
-
-Nx comes with local caching already built-in (check your `nx.json`). On CI you might want to go a step further.
-
-- [Set up remote caching](https://nx.dev/core-features/share-your-cache)
-- [Set up task distribution across multiple machines](https://nx.dev/nx-cloud/features/distribute-task-execution)
-- [Learn more how to setup CI](https://nx.dev/recipes/ci)
-
-## Connect with us!
-
-- [Join the community](https://nx.dev/community)
-- [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
-- [Follow us on Twitter](https://twitter.com/nxdevtools)
+After applying the above steps you can start your app by running the below command and follow the required data:
+run `./configure-app.sh` 
