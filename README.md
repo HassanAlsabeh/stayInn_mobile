@@ -17,7 +17,7 @@ First you should run `./configure-app.sh` to enter the name and bundle Id for th
 ```
 
 ```
-2- You need to create your app icons(make sure to make to versions for staging and profuction)
+2- You need to create your app icons(make sure to make the versions of staging and profuction)
 ```
 
 ```

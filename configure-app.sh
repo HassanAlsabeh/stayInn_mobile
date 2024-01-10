@@ -1,74 +1,74 @@
-echo -n "Enter the Android bundle ID for your app: "
+echo  "Enter the Android bundle ID for your app: "
 read androidBundleId
-echo -n "Enter the IOS bundle ID for your app: "
+echo  "Enter the IOS bundle ID for your app: "
 read iosBundleId
-echo -n "Enter the new Folder Name for your app: "
+echo  "Enter the new Folder Name for your app: "
 read newFolderName
-echo -n "Enter apple developer account: "
+echo  "Enter apple developer account: "
 read appleDeveloperAccount
-echo -n "Enter App Store Connect Team ID: "
+echo  "Enter App Store Connect Team ID: "
 read appstoreteamID
-echo -n "Developer Portal Team ID: "
+echo  "Developer Portal Team ID: "
 read portalTeamId
-echo -n "AppSecretIOS: "
+echo  "AppSecretIOS: "
 read AppSecretIOS
-echo -n "AppSecretAndroid: "
+echo  "AppSecretAndroid: "
 read AppSecretAndroid
-echo -n "CodePush Deployment Key Code Prod Android: "
+echo  "CodePush Deployment Key Code Prod Android: "
 read CodePushDeploymentKeyCodeProdAndroid
-echo -n "CodePush Deployment Key Code Stage Android: "
+echo  "CodePush Deployment Key Code Stage Android: "
 read CodePushDeploymentKeyCodeStageAndroid
-echo -n "CodePush Deployment Key Code Prod IOS: "
+echo  "CodePush Deployment Key Code Prod IOS: "
 read CodePushDeploymentKeyCodeProdIOS
-echo -n "CodePush Deployment Key Code Stage IOS: "
+echo  "CodePush Deployment Key Code Stage IOS: "
 read CodePushDeploymentKeyCodeStageIOS
-echo -n "Fastlane key_idCode IOS: "
+echo  "Fastlane key_idCode IOS: "
 read key_idCode
-echo -n "Fastlane issuer_idCode IOS: "
+echo  "Fastlane issuer_idCode IOS: "
 read issuer_idCode
-echo -n "Fastlane description IOS: "
+echo  "Fastlane description IOS: "
 read description
-echo -n "Fastlane keywords IOS: "
+echo  "Fastlane keywords IOS: "
 read keywords
-echo -n "Fastlane marketingURL IOS: "
+echo  "Fastlane marketingURL IOS: "
 read marketingURL
-echo -n "Fastlane name IOS: "
+echo  "Fastlane name IOS: "
 read name
-echo -n "Fastlane privacyURL IOS: "
+echo  "Fastlane privacyURL IOS: "
 read privacyURL
-echo -n "Fastlane promotional_text IOS: "
+echo  "Fastlane promotional_text IOS: "
 read promotional_text
-echo -n "Fastlane release_notes IOS: "
+echo  "Fastlane release_notes IOS: "
 read release_notes
-echo -n "Fastlane subtitle IOS: "
+echo  "Fastlane subtitle IOS: "
 read subtitle
-echo -n "Fastlane support_url IOS: "
+echo  "Fastlane support_url IOS: "
 read support_url
-echo -n "Fastlane demo_password IOS: "
+echo  "Fastlane demo_password IOS: "
 read demo_password
-echo -n "Fastlane demo_user IOS: "
+echo  "Fastlane demo_user IOS: "
 read demo_user
-echo -n "Fastlane email_address IOS: "
+echo  "Fastlane email_address IOS: "
 read email_address
-echo -n "Fastlane first_name IOS: "
+echo  "Fastlane first_name IOS: "
 read first_name
-echo -n "Fastlane last_name IOS: "
+echo  "Fastlane last_name IOS: "
 read last_name
-echo -n "Fastlane notes IOS: "
+echo  "Fastlane notes IOS: "
 read notes
-echo -n "Fastlane phone_number IOS: "
+echo  "Fastlane phone_number IOS: "
 read phone_number
-echo -n "Fastlane copyright IOS: "
+echo  "Fastlane copyright IOS: "
 read copyright
-echo -n "Fastlane primary_category IOS: "
+echo  "Fastlane primary_category IOS: "
 read primary_category
-echo -n "Fastlane secondary_category IOS: "
+echo  "Fastlane secondary_category IOS: "
 read secondary_category
-echo -n "Fastlane full_description Android: "
+echo  "Fastlane full_description Android: "
 read full_description
-echo -n "Fastlane short_description Android: "
+echo  "Fastlane short_description Android: "
 read short_description
-echo -n "Fastlane title Android: "
+echo  "Fastlane title Android: "
 read title
 
     # Set bundle ID in necessary files
@@ -80,7 +80,6 @@ read title
     sed -i '' -e "s/portalTeamId/$portalTeamId/g" apps/react-native-standards/ios/fastlane/Appfile
     sed -i '' -e "s/AppSecretIOS/$AppSecretIOS/g" apps/react-native-standards/ios/ReactNativeStandards/AppCenter-Config.plist
     sed -i '' -e "s/AppSecretAndroid/$AppSecretAndroid/g" apps/react-native-standards/android/app/src/main/assets/appcenter-config.json
-
     sed -i '' -e "s/description/$description/g" apps/react-native-standards/ios/fastlane/metadata/en-US/description.txt
     sed -i '' -e "s/keywords/$keywords/g" apps/react-native-standards/ios/fastlane/metadata/en-US/keywords.txt
     sed -i '' -e "s/marketingURL/$marketingURL/g" apps/react-native-standards/ios/fastlane/metadata/en-US/keywords.txt
@@ -105,10 +104,6 @@ read title
     sed -i '' -e "s/full_description/$full_description/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/full_description.txt
     sed -i '' -e "s/short_description/$short_description/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/short_description.txt
     sed -i '' -e "s/title/$title/g" apps/react-native-standards/android/fastlane/metadata/android/en-GB/title.txt
-
-
-
-
     sed -i '' -e "s/CodePushDeploymentKeyCodeStageIOS/$CodePushDeploymentKeyCodeStageIOS/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/CodePushDeploymentKeyCodeProdIOS/$CodePushDeploymentKeyCodeProdIOS/g" apps/react-native-standards/ios/fastlane/Fastfile
     sed -i '' -e "s/reactnativestandards/$newFolderName/g" apps/react-native-standards/ios/fastlane/Fastfile
