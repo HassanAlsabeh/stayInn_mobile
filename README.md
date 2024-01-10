@@ -24,10 +24,9 @@
 ```
 4- Make sure to download the Authkey file for IOS fastlane functionality.
 ```
-
-``
-5- Make sure to add .json file for the fastlane android configuration.[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
-``
+```
+5- After creating android and `Ios` apps in the appcenter and initializing `Firebase` account for your app you can start the setup.
+```
 
 ```
 6- Same as IOS after creating app and its profile you need to create keyID and download it to IOS folder and get its credentials to fastlane fastfile.
@@ -38,37 +37,32 @@
 ```
 8- Create github repository to transfer your project to it (required).
 ```
-```
-9- After creating android and `Ios` apps in the appcenter and initializing `Firebase` account for your app you can start the setup.
-```
 
+```
+9- Make sure to add .json file for the fastlane android configuration.Check the link below.
+```
+[fastlane link](https://docs.fastlane.tools/actions/supply/#setup)
+
+
+## Remarks:
 IOS multi environments needs to be manually setup: [check the link down below](#multiple-environments).
 
 
 
-## Generate code
-
-If you happen to use Nx plugins, you can leverage code generators that might come with it.
-
-Run `nx list` to get a list of available plugins and whether they have generators. Then run `nx list <plugin-name>` to see what generators are available.
-
-Learn more about [Nx generators on the docs](https://nx.dev/plugin-features/use-code-generators).
-
 ### References:
 
-## Multiple Environments:
 
-To initialize multiple environments visit: [Multiple environemnt setup](https://white-stork.atlassian.net/wiki/spaces/WSD/pages/1000046593/React+Native+Multiple+Environments+Setup)
+Multiple environments: [Multiple environemnt setup](https://white-stork.atlassian.net/wiki/spaces/WSD/pages/1000046593/React+Native+Multiple+Environments+Setup)
 
-## Push Notification:
 
-To start with push notification visit : [Push notifications setup](https://white-stork.atlassian.net/wiki/spaces/WSD/pages/998899729/React+Native+Push+Notification+Firebase)
+Push notification: [Push notifications setup](https://white-stork.atlassian.net/wiki/spaces/WSD/pages/998899729/React+Native+Push+Notification+Firebase)
 
-## CodePush reference:
 
-[Code Push](https://medium.com/innovance-company-blog/usage-of-codepush-in-react-native-0887676ec7bf)
+CodePush setup: [Code Push](https://medium.com/innovance-company-blog/usage-of-codepush-in-react-native-0887676ec7bf)
 
 ## Running the app
 
 After applying the above steps you can start your app by running the below command and follow the required data:
+
+
 run `./configure-app.sh` 
