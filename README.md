@@ -6,8 +6,6 @@
 
 ## Start the app
 
-After creating android and ios apps in the appcenter and initializing firebase account for your app you can start the setup.
-
 
 ## Notes before running the project:
 
@@ -40,6 +38,11 @@ After creating android and ios apps in the appcenter and initializing firebase a
 ```
 8- Create github repository to transfer your project to since you are requested for its url
 ```
+```
+9- After creating android and ios apps in the appcenter and initializing firebase account for your app you can start the setup.
+```
+
+
 then to start the development server run `nx serve react_native_standards`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
 check first the script in project package.json to run the certain environment of android.
