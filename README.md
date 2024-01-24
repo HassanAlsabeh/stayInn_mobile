@@ -66,3 +66,4 @@ After applying the above steps you can start your app by running the below comma
 
 
 run `./configure-app.sh` 
+then run `npx nx start your-project-name --reset-cache`
