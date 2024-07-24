@@ -1,8 +1,0 @@
-app_identifier("com.reactnativestandards") # The bundle identifier of your app
-apple_id("appleDeveloperAccount") # Your Apple Developer Portal username
-
-itc_team_id("appstoreteamID") # App Store Connect Team ID 
-team_id("portalTeamId") # Developer Portal Team ID
-# xizl-dccu-zbup-tmgj
-# For more information about the Appfile, see:
-#     https://docs.fastlane.tools/advanced/#appfile

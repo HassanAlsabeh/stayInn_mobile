@@ -1,0 +1,82 @@
+
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do |options|
+    app_store_connect_api_key(
+      key_id: “1“,
+      issuer_id: “1”,
+      key_filepath: “./AuthKey_5237422CZ5.p8”,
+      duration: 1200, # optional (maximum 1200)
+  )
+    increment_build_number(xcodeproj: "stayInn.xcodeproj")
+    set_info_plist_value(path: "stayInn/Info.plist", key: "CodePushDeploymentKey", value: "QbC1375-HWm_6rZNqeZ6G0D3_pmWC5ti2oekS")
+    build_app(workspace: "stayInn.xcworkspace", scheme: "stayInn")
+
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+    
+  end
+
+  lane :version do |options|
+    updateVersion(options)
+  end
+
+  desc "Push a new release build to the App Store"
+  lane :release do |options|
+    increment_build_number(xcodeproj: "stayInn.xcodeproj")
+    set_info_plist_value(path: "stayInn/Info.plist", key: "CodePushDeploymentKey", value: "9_O5kstBsDtN6c2uer3Xo87nZwenO45U48-QX")
+    updateVersion(options)
+    build_app(workspace: "stayInn.xcworkspace", scheme: "stayInn")
+    upload_to_app_store(
+      force: true,
+      reject_if_possible: true,
+      skip_metadata: false,
+      skip_screenshots: true,
+      languages: ['en-US'],
+      release_notes: {
+        "default" => "bug fixed",
+        "en-US" => "bug fixed"
+
+      },
+      submit_for_review: true,
+      automatic_release: true,
+      submission_information: {
+        export_compliance_encryption_updated: false,
+        export_compliance_uses_encryption: false,
+        content_rights_contains_third_party_content: false,
+        add_id_info_uses_idfa: false,
+        add_id_info_serves_ads: false,
+      }
+    )
+ 
+
+  end
+
+  def updateVersion(options)
+    if options[:version]
+      version = options[:version]
+    else
+      version = prompt(text: "Enter the version type or specific version\n(major, minor, patch or 1.0.0): ")
+    end
+  
+    re = /\d+.\d+.\d+/
+    versionNum = version[re, 0]
+  
+    if (versionNum)
+      increment_version_number(
+        version_number: versionNum
+      )
+    elsif (version == 'major' || version == 'minor' || version == 'patch')
+      increment_version_number(
+        bump_type: version
+      )
+    else
+      UI.user_error!("[ERROR] Wrong version!!!!!!")
+    end
+  end
+
+end
