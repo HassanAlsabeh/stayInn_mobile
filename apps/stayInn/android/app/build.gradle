@@ -123,6 +123,7 @@ flavorDimensions "default"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         
     }
+    
     signingConfigs {
         release {
             keyAlias keystoreProperties['keyAlias']
@@ -173,7 +174,6 @@ flavorDimensions "default"
 }
 
 dependencies {
-    
     androidTestImplementation('com.wix:detox:+')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation project(':react-native-config')

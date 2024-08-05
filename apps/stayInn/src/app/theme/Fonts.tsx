@@ -14,13 +14,12 @@ export const fontSizes = {
 };
 
 export const fontFamily = {
-  Poppins: 'Poppins-Regular',
-  Poppins_medium: 'Poppins-Medium',
-  Poppins_bold: 'Poppins-Bold',
-  Poppins_semiBold: 'Poppins-SemiBold',
-  Poppins_light: 'Poppins-Light',
-  Poppins_thin: 'Poppins-Thin',
-  Inter: 'Inter-Regular',
-  Inter_medium: 'Inter-Medium',
-  Play: 'PlayfairDisplay-Regular',
+  Avenir: 'Avenir-Black',
+  Avenir_medium: 'Avenir-Medium',
+  Avenir_bold: 'Avenir-Heavy',
+  Avenir_light: 'Avenir-Light',
+  Atten: 'AttenNewBook',
+  Atten_medium: 'AttenRoundNewMedium',
+  Atten_bold: 'AttenNewBold',
+  Atten_light: 'AttenRoundNewRegular',
 };
