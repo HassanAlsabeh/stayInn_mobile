@@ -38,6 +38,7 @@
     "react-native-svg": "*",
     "react-native-svg-transformer": "*",
     "react-native-vector-icons": "*",
-    "react-native-video": "^6.4.3"
+    "react-native-video": "^6.4.3",
+    "react-native-reanimated-carousel": "*"
   }
 }

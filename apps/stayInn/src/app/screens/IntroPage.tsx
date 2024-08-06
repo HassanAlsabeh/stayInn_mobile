@@ -44,7 +44,11 @@ export default function IntroPage() {
   const { theme, setTheme } = useCustomTheme();
   const { height, width } = useWindowDimensions();
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const photoLinks = [
+    'https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/best-furniture-for-your-home-2022-section-1.jpg',
+    'https://i.ebayimg.com/images/g/Yw4AAOSw9Shgi9ys/s-l500.jpg',
+    'https://hemmingandwills.co.uk/cdn/shop/articles/featured_image_-_living_room_furniture_layout_1600x@2x.jpg?v=1692692232',
+  ];
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -52,7 +56,7 @@ export default function IntroPage() {
         resizeMode="cover"
         style={{
           height: height,
-          width: width,
+          width: width * 1.1,
         }}
       >
         <View style={styles.logo}>
@@ -70,23 +74,19 @@ export default function IntroPage() {
             autoPlay={false}
             pagingEnabled={true}
             snapEnabled={true}
-            data={[...new Array(6).keys()]}
+            data={photoLinks}
             scrollAnimationDuration={1000}
             onSnapToItem={(index) => setCurrentIndex(index)}
-            renderItem={({ index }) => (
-              <View
-                style={{
-                  flex: 1,
-                  borderWidth: 1,
-                  justifyContent: 'center',
-                  borderRadius: Borders.border_14,
-                  width: 200,
-                  height: 200,
-                }}
-              ></View>
+            renderItem={({ index, item }) => (
+              <View style={styles.carouselItem}>
+                <Image source={{ uri: item }} style={styles.carouselImage} />
+              </View>
             )}
           />
-          <SnapIndicator currentIndex={currentIndex} itemCount={6} />
+          <SnapIndicator
+            currentIndex={currentIndex}
+            itemCount={photoLinks?.length}
+          />
         </View>
       </ImageBackground>
     </View>
@@ -110,6 +110,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     height: 250,
+  },
+  carouselItem: {
+    width: 200,
+    height: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: Borders.border_14,
+    overflow: 'hidden', // Ensures the image doesn't overflow the rounded corners
+  },
+  carouselImage: {
+    width: 200,
+    height: 200,
+    resizeMode: 'cover', // Ensures the image covers the entire 200x200 area
   },
   containerCarousel: {
     flexDirection: 'row',
