@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>stayInn</string>
+	<string>StayInn</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,10 +22,9 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-		<key>CodePushDeploymentKey</key>
-	<string>Kfdfdfd</string>
+	<key>CodePushDeploymentKey</key>
+	<string>QbC1375-HWm_6rZNqeZ6G0D3_pmWC5ti2oekS</string>
 	<key>LSRequiresIPhoneOS</key>
-
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
@@ -40,6 +39,17 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AttenNewBook.otf</string>
+		<string>AttenNewBold.otf</string>
+		<string>AttenRoundNewMedium.otf</string>
+		<string>AttenRoundNewRegular.otf</string>
+		<string>Avenir-Black.ttf</string>
+		<string>Avenir-Medium.ttf</string>
+		<string>Avenir-Heavy.ttf</string>
+		<string>Avenir-Light.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
